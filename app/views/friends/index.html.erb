@@ -8,6 +8,7 @@
     <th scope="col">Email</th>
     <th scope="col">Phone</th>
     <th scope="col">Twitter</th>
+    <th scope="col">User ID</th>
     <th scope="col"></th>
 
   </tr>
@@ -19,7 +20,8 @@
     <td><%= friend.email %></td>
     <td><%= friend.phone %></td>
     <td><%= friend.twitter %></td>
-    <td><%= link_to 'Delete', friend, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger btn-sm" %></td>
+    <td><%= friend.user_id %></td>
+    <td><%= link_to 'Delete', friend, data: { turbo_method: :delete }, class: "btn btn-outline-danger btn-sm" %></td>
 
   </tr>
   <%end %>
